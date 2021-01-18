@@ -1,0 +1,23 @@
+AdaBoost attempts to boost the accuracy of an ensemble of weak classifiers. The AdaBoost
+algorithm [9] solves many of the practical difficulties of earlier boosting algorithms. Each
+weak classifier is trained stage-wise to minimize the empirical error for a given distribution
+reweighted according to the classification errors of the previously trained classifiers. It is shown
+that AdaBoost is a sequential forward search procedure using the greedy selection strategy to
+minimize a certain margin on the training set [33].
+A crucial heuristic assumption used in such a sequential forward search procedure is the
+monotonicity (i.e., that addition of a new weak classifier to the current set does not decrease
+the value of the performance criterion). The premise offered by the sequential procedure in
+AdaBoost breaks down when this assumption is violated (i.e., when the performance criterion
+function is nonmonotonic).
+Floating Search [30] is a sequential feature selection procedure with backtracking, aimed to
+deal with nonmonotonic criterion functions for feature selection. A straight sequential selection
+method such as sequential forward search or sequential backward search adds or deletes one
+feature at a time. To make this work well, the monotonicity property has to be satisfied by
+the performance criterion function. Feature selection with a nonmonotonic criterion may be
+dealt with using a more sophisticated technique.
+The sequential forward floating search (SFFS) methods [30] allows the number of backtracking
+steps to be controlled instead of being fixed beforehand. Specifically, it adds or deletes
+a single (E = 1) feature and then backtracks r steps, where r depends on the current situation. It
+is this flexibility that overcomes the limitations due to the nonmonotonicity problem. Improvement
+on the quality of selected features is achieved at the cost of increased computation due to
+the extended search. The SFFS algorithm performs well in several applications [15, 30].
